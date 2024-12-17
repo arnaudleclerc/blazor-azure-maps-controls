@@ -9,8 +9,8 @@ on:
       - main
     paths:
       - src/**
-      - workflows/**
-
+      - .github/**
+      
 jobs:
   build:
 
