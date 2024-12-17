@@ -3,7 +3,6 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
     using System.Threading.Tasks;
 
     using AzureMapsControl.Components.Atlas;
@@ -22,8 +21,6 @@
     using Microsoft.JSInterop;
 
     using Moq;
-
-    using NuGet.Frameworks;
 
     using Xunit;
 
