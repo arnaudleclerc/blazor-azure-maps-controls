@@ -7,10 +7,11 @@ on:
       - hotfix/**
       - develop
       - main
+      - features/**
     paths:
       - src/**
       - .github/**
-      
+
 jobs:
   build:
 
