@@ -9,6 +9,7 @@ on:
       - main
     paths:
       - src/**
+      - workflows/**
 
 jobs:
   build:
