@@ -163,7 +163,7 @@ export class Animation {
         );
 
         if (!options.disposeOnComplete) {
-            this, this._animations.set(animationId, animation);
+            this._animations.set(animationId, animation);
         }
     }
 
