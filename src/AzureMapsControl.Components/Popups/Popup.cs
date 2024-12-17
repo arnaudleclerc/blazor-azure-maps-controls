@@ -112,21 +112,6 @@
         }
 
         /// <summary>
-        /// Update the popup with the updated options
-        /// </summary>
-        /// <param name="update">Update to provide on the options</param>
-        /// <returns></returns>
-        /// <exception cref="ComponentNotAddedToMapException">The control has not been added to the map</exception>
-        /// <exception cref="PopupAlreadyRemovedException">The popup has already been removed</exception>
-        [Obsolete("Will be removed in a future version. Use SetOptionsAsync instead.")]
-        public virtual async ValueTask UpdateAsync(Action<PopupOptions> update)
-        {
-            Logger?.LogAzureMapsControlInfo(AzureMapLogEvent.Popup_UpdateAsync, "Popup - UpdateAsync");
-
-            await SetOptionsAsync(update);
-        }
-
-        /// <summary>
         /// Set the options on the popup
         /// </summary>
         /// <param name="update">Update to apply on the options</param>

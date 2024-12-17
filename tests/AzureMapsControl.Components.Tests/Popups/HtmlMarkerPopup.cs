@@ -173,38 +173,6 @@
         }
 
         [Fact]
-        public async Task Should_Update_Async()
-        {
-            var popup = new HtmlMarkerPopup(new PopupOptions()) {
-                JSRuntime = _jsRuntimeMock.Object,
-                HasBeenToggled = true
-            };
-            var updatedContent = "updatedContent";
-            await popup.UpdateAsync(options => options.Content = updatedContent);
-            Assert.Equal(updatedContent, popup.Options.Content);
-
-            _jsRuntimeMock.Verify(runtime => runtime.InvokeVoidAsync(Constants.JsConstants.Methods.Popup.SetOptions.ToPopupNamespace(), It.Is<object[]>(parameters =>
-                parameters[0] as string == popup.Id
-                && (parameters[1] as PopupOptions).Content == "updatedContent"
-            )), Times.Once);
-            _jsRuntimeMock.VerifyNoOtherCalls();
-        }
-
-        [Fact]
-        public async Task Should_NotUpdate_NotAddedToMapCase_Async()
-        {
-            var popup = new HtmlMarkerPopup(new PopupOptions()) {
-                HasBeenToggled = true
-            };
-
-            var updatedContent = "updatedContent";
-
-            await Assert.ThrowsAnyAsync<ComponentNotAddedToMapException>(async () => await popup.UpdateAsync(options => options.Content = updatedContent));
-
-            _jsRuntimeMock.VerifyNoOtherCalls();
-        }
-
-        [Fact]
         public async Task Should_SetOptions_Async()
         {
             var popup = new HtmlMarkerPopup(new PopupOptions()) {
@@ -232,18 +200,6 @@
             var updatedContent = "updatedContent";
 
             await Assert.ThrowsAnyAsync<ComponentNotAddedToMapException>(async () => await popup.SetOptionsAsync(options => options.Content = updatedContent));
-
-            _jsRuntimeMock.VerifyNoOtherCalls();
-        }
-
-        [Fact]
-        public async Task Should_Not_Update_Async()
-        {
-            var popup = new HtmlMarkerPopup(new PopupOptions()) {
-                JSRuntime = _jsRuntimeMock.Object
-            };
-            var updatedContent = "updatedContent";
-            await popup.UpdateAsync(options => options.Content = updatedContent);
 
             _jsRuntimeMock.VerifyNoOtherCalls();
         }

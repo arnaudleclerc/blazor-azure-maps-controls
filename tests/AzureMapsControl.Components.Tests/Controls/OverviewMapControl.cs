@@ -30,34 +30,6 @@
         }
 
         [Fact]
-        public async Task Should_UpdateAsync()
-        {
-            var options = new OverviewMapControlOptions();
-            var position = ControlPosition.BottomLeft;
-            var control = new OverviewMapControl(options, position) {
-                JsRuntime = _jsRuntimeMock.Object
-            };
-
-            await control.UpdateAsync(options => options.Interactive = true);
-            Assert.True(options.Interactive);
-            _jsRuntimeMock.Verify(runtime => runtime.InvokeVoidAsync(Constants.JsConstants.Methods.OverviewMapControl.SetOptions.ToOverviewMapControlNamespace(), It.Is<object[]>(parameters =>
-                (parameters[0] as Guid?).GetValueOrDefault().ToString() == control.Id.ToString()
-                && (parameters[1] as OverviewMapControlOptions) == control.Options
-            )), Times.Once);
-            _jsRuntimeMock.VerifyNoOtherCalls();
-        }
-
-        [Fact]
-        public async Task Should_NotUpdate_NotAddtoMapCase_Async()
-        {
-            var control = new OverviewMapControl();
-
-            await Assert.ThrowsAnyAsync<ComponentNotAddedToMapException>(async () => await control.UpdateAsync(options => options.Interactive = true));
-
-            _jsRuntimeMock.VerifyNoOtherCalls();
-        }
-
-        [Fact]
         public async Task Should_SetOptionsAsync()
         {
             var options = new OverviewMapControlOptions();
@@ -82,22 +54,6 @@
 
             await Assert.ThrowsAnyAsync<ComponentNotAddedToMapException>(async () => await control.SetOptionsAsync(options => options.Interactive = true));
 
-            _jsRuntimeMock.VerifyNoOtherCalls();
-        }
-
-        [Fact]
-        public async Task Should_UpdateAsyncWithDefaultOptionsAsync()
-        {
-            var control = new OverviewMapControl {
-                JsRuntime = _jsRuntimeMock.Object
-            };
-
-            await control.UpdateAsync(options => options.Interactive = true);
-            Assert.True(control.Options.Interactive);
-            _jsRuntimeMock.Verify(runtime => runtime.InvokeVoidAsync(Constants.JsConstants.Methods.OverviewMapControl.SetOptions.ToOverviewMapControlNamespace(), It.Is<object[]>(parameters =>
-                            (parameters[0] as Guid?).GetValueOrDefault().ToString() == control.Id.ToString()
-                            && (parameters[1] as OverviewMapControlOptions) == control.Options
-                        )), Times.Once);
             _jsRuntimeMock.VerifyNoOtherCalls();
         }
 

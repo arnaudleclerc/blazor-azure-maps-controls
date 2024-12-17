@@ -21,20 +21,6 @@
         public OverviewMapControl(OverviewMapControlOptions options = null, ControlPosition position = default) : base(options, position) { }
 
         /// <summary>
-        /// Update the options of the control
-        /// </summary>
-        /// <param name="update">Update to apply to the options</param>
-        /// <returns></returns>
-        /// <exception cref="Exceptions.ComponentNotAddedToMapException">The control has not been added to the map</exception>
-        [Obsolete("Will be removed in a future version. Use SetOptionsAsync instead.")]
-        public async ValueTask UpdateAsync(Action<OverviewMapControlOptions> update)
-        {
-            Logger?.LogAzureMapsControlInfo(AzureMapLogEvent.OverviewMapControl_UpdateAsync, "OverviewMapControl - UpdateAsync");
-
-            await SetOptionsAsync(update);
-        }
-
-        /// <summary>
         /// Set the options of the control
         /// </summary>
         /// <param name="update">Update to apply to the options</param>
@@ -56,8 +42,8 @@
 
             update(Options);
 
-            Logger?.LogAzureMapsControlDebug(AzureMapLogEvent.OverviewMapControl_UpdateAsync, $"Id: {Id}");
-            Logger?.LogAzureMapsControlDebug(AzureMapLogEvent.OverviewMapControl_UpdateAsync, $"Type: {Type}");
+            Logger?.LogAzureMapsControlDebug(AzureMapLogEvent.OverviewMapControl_SetOptionsAsync, $"Id: {Id}");
+            Logger?.LogAzureMapsControlDebug(AzureMapLogEvent.OverviewMapControl_SetOptionsAsync, $"Type: {Type}");
             await JsRuntime.InvokeVoidAsync(Constants.JsConstants.Methods.OverviewMapControl.SetOptions.ToOverviewMapControlNamespace(), Id, Options);
         }
     }

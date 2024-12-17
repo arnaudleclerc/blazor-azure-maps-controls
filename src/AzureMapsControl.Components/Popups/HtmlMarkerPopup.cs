@@ -47,15 +47,6 @@
             }
         }
 
-        [Obsolete("Will be removed in a future versio. Use SetOptionsAsync instead")]
-        public override async ValueTask UpdateAsync(Action<PopupOptions> update)
-        {
-            if (HasBeenToggled)
-            {
-                await base.UpdateAsync(update);
-            }
-        }
-
         public override async ValueTask SetOptionsAsync(Action<PopupOptions> update)
         {
             if (HasBeenToggled)
