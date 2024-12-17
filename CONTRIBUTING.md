@@ -12,7 +12,7 @@ This project and everyone participating on it is governed by the [Contributor Co
 
 ### I just have a question
 
-If you do not find your answer on the documentation or on an already existing issue, please either file a new one or ask your question on the `#questions` channel on [Slack](https://azuremapscontrolcomp.slack.com/).
+If you do not find your answer on the documentation or on an already existing issue, please file a new issue.
 
 ### Reporting bugs
 
@@ -35,9 +35,9 @@ Please take a look at the list of issues or enhancements. Usually the issues whi
 
 Please consider the following points when creating your pull request :
 
-- The C# code has to respect the `.editorconfig`. Changes or improvements to this file are welcome, please discuss them on [Slack](https://azuremapscontrolcomp.slack.com/) before.
+- The C# code has to respect the `.editorconfig`. Changes or improvements to this file are welcome.
 - Please add unit tests if possible and verify that all the unit tests are passing. For that, run `dotnet test` on the `AzureMapsControl.Components.Tests` project.
-- The typescript code uses `eslint` as a linter. Changes to the rules are welcome, please discuss them on [Slack](https://azuremapscontrolcomp.slack.com/) before.
+- The typescript code uses `eslint` as a linter..
 - Please verify that all the samples on the `AzureMapsControl.Sample` project are working. Please take time to add new samples if necessary.
 
 ## Local development
@@ -46,7 +46,7 @@ Please consider the following points when creating your pull request :
 
 - You will need an Azure Maps Account. More information here: [https://docs.microsoft.com/en-us/azure/azure-maps/quick-demo-map-app#create-an-azure-maps-account](https://docs.microsoft.com/en-us/azure/azure-maps/quick-demo-map-app#create-an-azure-maps-account)
 - You need to be able restore the packages using `npm`.
-- This library supports .NET 5 and .NET 6. Please be sure you use one of those versions.
+- This library supports .NET 8 and .NET 9. Please be sure you use one of those versions.
 
 ### Structure of the repository
 
