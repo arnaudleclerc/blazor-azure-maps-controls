@@ -8,7 +8,7 @@
     /// Options for the FullscreenControl.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public sealed class FullScreenControlOptions : IControlOptions
+    public sealed class FullScreenControlOptions
     {
         /// <summary>
         /// The HTML element that should be made fullscreen. If not specified, the map container element will be used. 

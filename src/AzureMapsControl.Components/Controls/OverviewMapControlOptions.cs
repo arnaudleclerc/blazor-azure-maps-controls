@@ -7,7 +7,7 @@
     using AzureMapsControl.Components.Markers;
 
     [ExcludeFromCodeCoverage]
-    public sealed class OverviewMapControlOptions : IControlOptions
+    public sealed class OverviewMapControlOptions
     {
         /// <summary>
         /// The height of the overview map in pixels.

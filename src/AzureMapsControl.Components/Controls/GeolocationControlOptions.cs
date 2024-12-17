@@ -5,7 +5,7 @@
     using AzureMapsControl.Components.Geolocation;
 
     [ExcludeFromCodeCoverage]
-    public sealed class GeolocationControlOptions : IControlOptions
+    public sealed class GeolocationControlOptions
     {
         /// <summary>
         /// Specifies that if the `speed` or `heading` values are missing in the geolocation position, it will calculate these values based on the last known position.

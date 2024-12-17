@@ -6,7 +6,7 @@
     /// The options for a CompassControl object.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public sealed class CompassControlOptions : IControlOptions
+    public sealed class CompassControlOptions
     {
         /// <summary>
         /// The angle that the map will rotate with each click of the control.

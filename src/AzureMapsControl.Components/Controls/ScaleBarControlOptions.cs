@@ -3,7 +3,7 @@
     using System.Diagnostics.CodeAnalysis;
 
     [ExcludeFromCodeCoverage]
-    public sealed class ScaleBarControlOptions : IControlOptions
+    public sealed class ScaleBarControlOptions
     {
         /// <summary>
         /// The maximum length of the scale bar in pixels

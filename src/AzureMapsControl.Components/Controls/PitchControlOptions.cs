@@ -6,7 +6,7 @@
     /// The options for a PitchControl object.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public sealed class PitchControlOptions : IControlOptions
+    public sealed class PitchControlOptions
     {
         /// <summary>
         /// The angle that the map will tilt with each click of the control.

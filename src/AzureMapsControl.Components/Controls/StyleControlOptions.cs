@@ -9,7 +9,7 @@
     /// The options for a StyleControl object.
     /// </summary>
     [ExcludeFromCodeCoverage]
-    public sealed class StyleControlOptions : IControlOptions
+    public sealed class StyleControlOptions
     {
         /// <summary>
         /// The layout to display the styles in.
