@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
-    <RazorLangVersion>3.0</RazorLangVersion>
     <Authors>Arnaud Leclerc</Authors>
     <Company />
     <RepositoryUrl>https://github.com/arnaudleclerc/AzureMapsControl.Components</RepositoryUrl>
