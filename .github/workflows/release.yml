@@ -43,7 +43,7 @@ jobs:
     - name: NPM Install
       run: cd ./src/AzureMapsControl.Components && npm i
     - name: Lint
-      run: cd ./src/AzureMapsControl.Components && npm run lint
+      run: cd ./src/AzureMapsControl.Components && npx eslint -c eslint.config.mjs
     - name: Build Typescript
       run: cd ./src/AzureMapsControl.Components && npm run build
     - name: Use GitVersion
