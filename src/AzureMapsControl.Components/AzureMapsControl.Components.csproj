@@ -11,6 +11,7 @@
     <PackageProjectUrl>https://github.com/arnaudleclerc/AzureMapsControl.Components</PackageProjectUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageId>AzureMapsControl.Components</PackageId>
   </PropertyGroup>
 
 
