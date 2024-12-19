@@ -27,6 +27,9 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+    <None Include="package.json" />
+    <None Include="package-lock.json" />
+    <None Include="tsconfig.json" />
   </ItemGroup>
 
   <ItemGroup>
