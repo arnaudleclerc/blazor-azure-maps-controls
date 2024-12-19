@@ -17,6 +17,12 @@
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="package.json" />
+    <Content Remove="package-lock.json" />
+    <Content Remove="tsconfig.json" />
+  </ItemGroup>
   
   <ItemGroup>
     <None Include="..\..\README.md">
