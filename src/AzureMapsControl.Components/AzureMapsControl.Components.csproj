@@ -14,13 +14,10 @@
     <PackageId>AzureMapsControl.Components</PackageId>
   </PropertyGroup>
 
-
   <ItemGroup>
-    <Content Remove="package.json" />
-    <Content Remove="package-lock.json" />
-    <Content Remove="tsconfig.json" />
+    <SupportedPlatform Include="browser" />
   </ItemGroup>
-
+  
   <ItemGroup>
     <None Include="..\..\README.md">
       <Pack>True</Pack>
@@ -30,9 +27,6 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
-    <None Include="package.json" />
-    <None Include="package-lock.json" />
-    <None Include="tsconfig.json" />
   </ItemGroup>
 
   <ItemGroup>
